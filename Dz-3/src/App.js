@@ -1,8 +1,18 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-import Menu from "./components/Menu";
+import Header from "./components/Header";
+import Main from "./components/Main";
 
 
-let wrapper=document.querySelector(".wrapper");
-ReactDom.render(<Menu/>,wrapper);
+
+let body=document.querySelector("body");
+ReactDom.render(
+    <wrapper>
+
+    <Header/>
+    <Main/>
+
+    {/*Footer*/}
+    </wrapper>
+    ,body);
