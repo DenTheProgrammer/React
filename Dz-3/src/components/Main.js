@@ -6,13 +6,14 @@ import Post from "./Post";
 
 class Main extends React.Component{
     render(){
+
+
         return(
             <div className="container">
                 <div className="main-content">
                     <Title/>
                    {/*<Posts/>*/}
-                   <Post/>
-                   <Post/>
+                   
                 </div>
                 <Aside/>
             </div>
