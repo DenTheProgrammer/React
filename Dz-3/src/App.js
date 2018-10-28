@@ -6,13 +6,13 @@ import Main from "./components/Main";
 
 
 
-let body=document.querySelector("body");
+let app=document.querySelector("#app");
 ReactDom.render(
-    <wrapper>
+    <div className="wrapper">
 
     <Header/>
     <Main/>
 
     {/*Footer*/}
-    </wrapper>
-    ,body);
+    </div>
+    ,app);
