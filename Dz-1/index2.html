@@ -6,20 +6,29 @@
 </head>
 
 <body>
+   <form action="">
+       <input type="number" class="a">
+       <input type="number" class="b">
+   </form>
+   <div class="out">Введите значения сторон прямоугольника</div>
+   <button class="calc">Посчитать</button>
     <script>
-        let loop = (times = 0, callback = null) => {
-            if (callback == null) return;
-            for (let i = 0; i < times; i++) {
-                callback();
-            }
-        }
-
-        let a = () => {
-            console.log("a");
-        }
+        let calc=document.querySelector(".calc"),
+            out=document.querySelector(".out"),
+            a=document.querySelector(".a"),
+            b=document.querySelector(".b");
+        calc.addEventListener("click",(e)=>{
+           out.innerHTML= `Ответ в консоли`;
+            calculateAreaOfSquare(a.value,b.value);
+        })
         
-        //пример
-        loop(5, a);
+        let calculateAreaOfSquare = (a, b) => {
+            console.log ({
+                area: a * b,
+                figure: "square",
+                input: `a=${a} b=${b}`
+            });
+        }
     </script>
 </body>
 </html>
