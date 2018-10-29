@@ -2,7 +2,7 @@ import React from "react";
 import Title from "./Title";
 import content from "./page-content";
 import Aside from "./Aside";
-import Post from "./Post";
+import Posts from "./Posts";
 
 class Main extends React.Component{
     render(){
@@ -11,9 +11,8 @@ class Main extends React.Component{
         return(
             <div className="container">
                 <div className="main-content">
-                    <Title/>
-                   {/*<Posts/>*/}
-                   
+                    <Title title={content.blogTitle}/>
+                    <Posts posts={content.posts}/>
                 </div>
                 <Aside/>
             </div>

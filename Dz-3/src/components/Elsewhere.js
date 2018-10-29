@@ -1,17 +1,18 @@
 import React from "react";
-import content from "./page-content";
 
 class Elsewhere extends React.Component{
     render(){
+        let linkList=this.props.elsewhere.map((link,index)=>{
+            return(
+                <li key={index}><a href={link.link}>{link.text}</a></li>
+            )
+        });
         return(
-            <div className="elsewhere">
-                <h2>Elsewhere</h2>
-                <ul>
-                    <li><a href={content.aside.elsewhere[0].link}>{content.aside.elsewhere[0].text}</a></li>
-                    <li><a href={content.aside.elsewhere[1].link}>{content.aside.elsewhere[1].text}</a></li>
-                    <li><a href={content.aside.elsewhere[2].link}>{content.aside.elsewhere[2].text}</a></li>
-                </ul>
-            </div>
+           <div className="elsewhere">
+               <h2>Elsewhere</h2>
+               <ul>{linkList}</ul>
+           </div>
+
         )
     }
 }

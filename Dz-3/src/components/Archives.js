@@ -1,25 +1,17 @@
 import React from "react";
-import content from "./page-content";
 
 class Archives extends React.Component {
     render() {
-
+        let archives=this.props.archives.map((link,index)=>{
+            return(
+                <li key={index}><a href={link.link}>{link.text}</a></li>
+            )
+        });
         return (
             <div className="archives">
                 <h2>Archives</h2>
                 <ul>
-                    <li><a href="#">February 2014</a></li>
-                    <li><a href="#">February 2014</a></li>
-                    <li><a href="#">February 2014</a></li>
-                    <li><a href="#">February 2014</a></li>
-                    <li><a href="#">February 2014</a></li>
-                    <li><a href="#">February 2014</a></li>
-                    <li><a href="#">February 2014</a></li>
-                    <li><a href="#">February 2014</a></li>
-                    <li><a href="#">February 2014</a></li>
-                    <li><a href="#">February 2014</a></li>
-                    <li><a href="#">February 2014</a></li>
-                    <li><a href="#">February 2014</a></li>
+                    {archives}
                 </ul>
             </div>
         )
