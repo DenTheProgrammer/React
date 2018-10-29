@@ -10,7 +10,9 @@ class Header extends React.Component{
         });
         return(
             <header>
-                <ul>{links}</ul>
+                <div className="container">
+                    <ul>{links}</ul>
+                </div>
             </header>
         )
     }
