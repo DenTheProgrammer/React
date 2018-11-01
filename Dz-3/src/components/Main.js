@@ -9,7 +9,7 @@ class Main extends React.Component{
 
 
         return(
-            <div className="container">
+            <div className={"container main_container"}>
                 <div className="main-content">
                     <Title title={content.blogTitle}/>
                     <Posts posts={content.posts}/>
