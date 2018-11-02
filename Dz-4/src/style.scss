@@ -52,6 +52,10 @@ li{
     .post{
       margin: 80px 0;
     }
+    .add-post{
+      display: flex;
+      flex-direction: column;
+    }
   }
   aside{
     width: 30%;
@@ -83,4 +87,14 @@ li{
 .container{
   margin: 0 auto;
   max-width: 1020px;
+}
+
+button{
+  border: solid 1px lightblue;
+  background: white;
+  color: blue;
+  padding: 5px;
+  font-size: large;
+
+
 }
