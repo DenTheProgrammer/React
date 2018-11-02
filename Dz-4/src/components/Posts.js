@@ -4,7 +4,7 @@ import AddPost from "./AddPost";
 
 class Posts extends React.Component{
 
-    state={
+    state={                        //экспериментальный синтаксис, работает благодаря плагину "@babel/plugin-proposal-class-properties"
         postList:this.props.posts,
     };
 
@@ -33,7 +33,7 @@ class Posts extends React.Component{
 
         componentDidMount(){
         let form=document.querySelector(".add-post");
-            form.addEventListener("submit",(e)=>{
+            form.addEventListener("submit",(e)=>{ //кажется если здесь сделать стрелочную функцию, то не нужны замыкания и self=this
                 e.preventDefault();
                 console.log(this.state.postList);
                 let title=document.querySelector(".add-post__title").value;
